@@ -24,7 +24,7 @@ def CompNewPost():
 
         if orig.get('title') != newp.get('title'):
             print(newp.get('title'))
-        elif orig.get('title') == newp.get('title'):
+        else:
             print(1)
 
 CompNewPost()
