@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import myblogparser as ps
 from collections import OrderedDict
 #import python_twitter
 
@@ -18,7 +17,17 @@ def NewPost_file() :
 
 NewPost_file()
 
-"""def CompNewPost():
-    with open('ExiNewPost.json') as orig_file and  open('NewPost.json')"""
+def CompNewPost():
+    with open('ExiNewPost.json', 'r') as orig_file, open('NewPost.json', 'r') as new_file:
+        orig = json.load(orig_file)
+        newp = json.load(new_file)
+
+        if orig.get('title') != newp.get('title'):
+            print(newp.get('title'))
+        elif orig.get('title') == newp.get('title'):
+            print(1)
+
+CompNewPost()
+
 
 
