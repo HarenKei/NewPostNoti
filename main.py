@@ -6,11 +6,12 @@ import telegram_bot as tgb
 
 myblog = requests.get("https://heibondk.tistory.com/")
 soup = BeautifulSoup(myblog.content, "html.parser")
+global link
+
 
 
 def NewPost_file() : #새 포스팅을 검사하기 위한 함수
     file_data = OrderedDict()
-    file_data["link"] = "https://heibondk.tistory.com"
     file_data["title"] = soup.select(".title")[0].get_text()
     file_data["date"] = soup.select(".date")[0].get_text()
     links = soup.select(".post-item")[0]
@@ -28,10 +29,10 @@ def CompNewPost():
         newp = json.load(new_file)
 
         if orig.get('title') != newp.get('title'):
-            tgb.sendNoti(newp.get('title'), newp.get('date'),newp.get('link')+newp.get('href'))
+            tgb.sendNoti(newp.get('title'), newp.get('date'),newp.get('href'))
 
         else:
-            tgb.sendNoti(orig.get('title'), orig.get('date'),orig.get('link')+orig.get('href'))
+            tgb.sendNoti(orig.get('title'), orig.get('date'),orig.get('href'))
 
 CompNewPost()
 
