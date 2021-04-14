@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 from collections import OrderedDict
 import telegram_bot as tgb
+import myblogparser as exipsr
 
 myblog = requests.get("https://heibondk.tistory.com/")
 soup = BeautifulSoup(myblog.content, "html.parser")
@@ -23,13 +24,15 @@ def NewPost_file() : #새 포스팅을 검사하기 위한 함수
 
 NewPost_file()
 
+
 def CompNewPost():
     with open('ExiNewPost.json', 'r') as orig_file, open('NewPost.json', 'r') as new_file:
         orig = json.load(orig_file)
-        newp = json.load(new_file)
+        newf = json.load(new_file)
 
-        if orig.get('title') != newp.get('title'):
-            tgb.sendNoti(newp.get('title'), newp.get('date'),newp.get('href'))
+        if orig.get('title') != newf.get('title'):
+            tgb.sendNoti(newf.get('title'), newf.get('date'),newf.get('href'))
+            exipsr.exiNewPost_file()
 
         else:
             tgb.sendNoti(orig.get('title'), orig.get('date'),orig.get('href'))
