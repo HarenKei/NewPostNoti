@@ -10,8 +10,14 @@ def exiNewPost_file() :
     file_data = OrderedDict()
     file_data["title"] = soup.select(".title")[0].get_text()
     file_data["date"] = soup.select(".date")[0].get_text()
+    links = soup.select(".post-item")[0]
+    href = links.find('a')
+    href_last = href.attrs['href']
+    file_data["href"] = href_last
+
     with open('ExiNewPost.json', 'w', encoding="utf-8") as make_file:
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
 exiNewPost_file()
+
 
