@@ -10,6 +10,7 @@ soup = BeautifulSoup(myblog.content, "html.parser")
 
 def NewPost_file() : #새 포스팅을 검사하기 위한 함수
     file_data = OrderedDict()
+    file_data["link"] = "https://heibondk.tistory.com"
     file_data["title"] = soup.select(".title")[0].get_text()
     file_data["date"] = soup.select(".date")[0].get_text()
     links = soup.select(".post-item")[0]
