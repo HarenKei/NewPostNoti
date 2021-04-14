@@ -4,6 +4,8 @@
     <list default="true" id="55f79747-8a32-4045-b1cd-d42b99694bb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewPost.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewPost.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Python.telegram_bot">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blogPostNoti" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.telegram_bot" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.telegram_bot" />
         <item itemvalue="Python.myblogparser" />
       </list>
     </recent_temporary>
@@ -118,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618158677761</updated>
       <workItem from="1618158678869" duration="35000" />
-      <workItem from="1618318811896" duration="5916000" />
+      <workItem from="1618318811896" duration="8840000" />
     </task>
     <servers />
   </component>
@@ -126,22 +128,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="277" key="GridCell.Tab.0.bottom" timestamp="1618382118891">
+    <state width="1638" height="277" key="GridCell.Tab.0.bottom" timestamp="1618385455913">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1618382118891" />
-    <state width="1638" height="277" key="GridCell.Tab.0.center" timestamp="1618382118890">
+    <state width="1638" height="277" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1618385455913" />
+    <state width="1638" height="277" key="GridCell.Tab.0.center" timestamp="1618385455913">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1618382118890" />
-    <state width="1638" height="277" key="GridCell.Tab.0.left" timestamp="1618382118890">
+    <state width="1638" height="277" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1618385455913" />
+    <state width="1638" height="277" key="GridCell.Tab.0.left" timestamp="1618385455912">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1618382118890" />
-    <state width="1638" height="277" key="GridCell.Tab.0.right" timestamp="1618382118891">
+    <state width="1638" height="277" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1618385455912" />
+    <state width="1638" height="277" key="GridCell.Tab.0.right" timestamp="1618385455913">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state width="1638" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1618382118891" />
+    <state width="1638" height="277" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1618385455913" />
     <state width="1638" height="342" key="GridCell.Tab.1.bottom" timestamp="1618381986864">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
@@ -162,6 +164,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blogPostNoti$telegram_bot.coverage" NAME="telegram_bot Coverage Results" MODIFIED="1618382118884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/blogPostNoti$myblogparser.coverage" NAME="myblogparser Coverage Results" MODIFIED="1618331734906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/blogPostNoti$main.coverage" NAME="main Coverage Results" MODIFIED="1618381961995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/blogPostNoti$main.coverage" NAME="main Coverage Results" MODIFIED="1618385455907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

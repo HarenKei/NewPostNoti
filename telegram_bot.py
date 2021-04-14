@@ -7,6 +7,6 @@ updates = bot.getUpdates()
 for u in updates :
     print(u.message.text)
 
-chat_id = bot.getUpdates()[-1].message.chat.id
-bot.send_message(chat_id = chat_id, text= "저는 봇입니다.")
-
+def sendNoti(notiTitle, notiDate,postNum) :
+    chat_id = bot.getUpdates()[-1].message.chat.id
+    bot.send_message(chat_id=chat_id, text="STARGAZER 블로그에 다음과 같은 새 포스팅이 있습니다. \n " + "https://heibondk.tistory.com/"+ str(postNum) + "\n" + notiTitle +"\n"+ "업로드일 : " + notiDate)

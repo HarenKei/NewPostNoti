@@ -2,11 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from collections import OrderedDict
-#import python_twitter
+import telegram_bot as tgb
 
 myblog = requests.get("https://heibondk.tistory.com/")
 soup = BeautifulSoup(myblog.content, "html.parser")
 
+postNum = 68 #2021년 4월 14일 기준 STARGAZER 블로그 최근 포스트 번호.
 
 def NewPost_file() :
     file_data = OrderedDict()
@@ -17,17 +18,20 @@ def NewPost_file() :
 
 NewPost_file()
 
-def CompNewPost():
+def CompNewPost(posNum):
     with open('ExiNewPost.json', 'r') as orig_file, open('NewPost.json', 'r') as new_file:
         orig = json.load(orig_file)
         newp = json.load(new_file)
 
         if orig.get('title') != newp.get('title'):
-            print(newp.get('title'))
+            tgb.sendNoti(newp.get('title'), newp.get('date'), posNum)
+            global postNum
+            postNum+= 1
+            print(postNum)
         else:
-            print(1)
+            tgb.sendNoti(orig.get('title'), orig.get('date'), posNum)
 
-CompNewPost()
+CompNewPost(postNum)
 
 
 
