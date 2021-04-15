@@ -19,6 +19,5 @@ def exiNewPost_file() :
     with open('ExiNewPost.json', 'w', encoding="utf-8") as make_file:
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
-exiNewPost_file()
 
 

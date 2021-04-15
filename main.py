@@ -22,9 +22,6 @@ def NewPost_file() : #새 포스팅을 검사하기 위한 함수
     with open('NewPost.json', 'w', encoding="utf-8") as make_file:
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
-NewPost_file()
-
-
 def CompNewPost():
     with open('ExiNewPost.json', 'r') as orig_file, open('NewPost.json', 'r') as new_file:
         orig = json.load(orig_file)
@@ -32,10 +29,9 @@ def CompNewPost():
 
         if orig.get('title') != newf.get('title'):
             tgb.sendNoti(newf.get('title'), newf.get('date'),newf.get('href'))
-            exipsr.exiNewPost_file()
-
-            
+          # exipsr.exiNewPost_file()
+        
+NewPost_file()
 CompNewPost()
-
-
+exipsr.exiNewPost_file()
 
