@@ -34,9 +34,7 @@ def CompNewPost():
             tgb.sendNoti(newf.get('title'), newf.get('date'),newf.get('href'))
             exipsr.exiNewPost_file()
 
-        else:
-            tgb.sendNoti(orig.get('title'), orig.get('date'),orig.get('href'))
-
+            
 CompNewPost()
 
 
