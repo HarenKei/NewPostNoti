@@ -10,8 +10,6 @@ myblog = requests.get("https://heibondk.tistory.com/")
 soup = BeautifulSoup(myblog.content, "html.parser")
 global link
 
-
-
 def NewPost_file() : #새 포스팅을 검사하기 위한 함수
     file_data = OrderedDict()
     file_data["title"] = soup.select(".title")[0].get_text()
@@ -30,7 +28,7 @@ def CompNewPost():
 
         if orig.get('title') != newf.get('title'):
             tgb.sendNoti(newf.get('title'), newf.get('date'),newf.get('href'))
-          # exipsr.exiNewPost_file()
+            tb.twitting(newf.get('title'), newf.get('date'), newf.get('href'))
         
 NewPost_file()
 CompNewPost()
