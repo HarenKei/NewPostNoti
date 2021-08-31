@@ -18,7 +18,7 @@ def NewPost_file() : #새 포스팅을 검사하기 위한 함수
     href = links.find('a')
     href_last = href.attrs['href']
     file_data["href"] = href_last #새 포스팅의 포스트 번호를 가져오는 부분, 매우 지저분함;;
-    with open('NewPost.json', 'w', encoding="utf-8") as make_file:
+    with open('./POST_JSON/NewPost.json', 'w', encoding="utf-8") as make_file:
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
 def CompNewPost():
@@ -27,7 +27,7 @@ def CompNewPost():
         newf = json.load(new_file)
 
         if orig.get('title') != newf.get('title'):
-            tgb.sendNoti(newf.get('title'), newf.get('date'),newf.get('href'))
+            tgb.sendNoti(newf.get('title'), newf.get('date'), newf.get('href'))
             tb.twitting(newf.get('title'), newf.get('date'), newf.get('href'))
         
 NewPost_file()
