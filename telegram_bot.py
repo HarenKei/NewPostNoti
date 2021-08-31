@@ -1,5 +1,4 @@
 import telegram
-import json
 
 apiKey = open("./API_KEY/Telegram_Key", 'r')
 my_token = apiKey.read().rstrip('\n')
