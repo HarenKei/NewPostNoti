@@ -2,7 +2,6 @@ import telegram
 
 apiKey = open("./API_KEY/Telegram_Key", 'r')
 my_token = apiKey.read().rstrip('\n')
-print(my_token)
 bot = telegram.Bot(token=my_token)
 updates = bot.getUpdates()
 global link
