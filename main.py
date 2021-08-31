@@ -4,7 +4,6 @@ import json
 from collections import OrderedDict
 import telegram_bot as tgb
 import myblogparser as exipsr
-import tweepy
 
 myblog = requests.get("https://heibondk.tistory.com/")
 soup = BeautifulSoup(myblog.content, "html.parser")
