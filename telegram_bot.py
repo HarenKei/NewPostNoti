@@ -1,7 +1,7 @@
 import telegram
 import json
 
-apiKey = open("./Telegram_Key", 'r')
+apiKey = open("./API_KEY/Telegram_Key", 'r')
 my_token = apiKey.read().rstrip('\n')
 bot = telegram.Bot(token=my_token)
 updates = bot.getUpdates()

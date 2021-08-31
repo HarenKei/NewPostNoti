@@ -16,7 +16,7 @@ def exiNewPost_file() :
     href_last = href.attrs['href']
     file_data["href"] = href_last
 
-    with open('ExiNewPost.json', 'w', encoding="utf-8") as make_file:
+    with open('./POST_JSON/ExiNewPost.json', 'w', encoding="utf-8") as make_file:
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
 

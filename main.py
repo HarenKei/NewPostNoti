@@ -23,7 +23,7 @@ def NewPost_file() : #새 포스팅을 검사하기 위한 함수
         json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
 
 def CompNewPost():
-    with open('ExiNewPost.json', 'r') as orig_file, open('NewPost.json', 'r') as new_file:
+    with open('./POST_JSON/ExiNewPost.json', 'r') as orig_file, open('./POST_JSON/NewPost.json', 'r') as new_file:
         orig = json.load(orig_file)
         newf = json.load(new_file)
 
