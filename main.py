@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from collections import OrderedDict
-import telegram_bot as tgb
 import myblogparser as exipsr
 import twitter_bot as tb
 
@@ -27,9 +26,9 @@ def CompNewPost():
         newf = json.load(new_file)
 
         if orig.get('title') != newf.get('title'):
-            tgb.sendNoti(newf.get('title'), newf.get('date'), newf.get('href'))
             tb.twitting(newf.get('title'), newf.get('date'), newf.get('href'))
         
+
 NewPost_file()
 CompNewPost()
 exipsr.exiNewPost_file()
