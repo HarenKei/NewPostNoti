@@ -25,8 +25,9 @@ def CompNewPost():
         orig = json.load(orig_file)
         newf = json.load(new_file)
 
-        if orig.get('title') != newf.get('title'):
+        if orig.get('href') != newf.get('href'):
             tb.twitting(newf.get('title'), newf.get('date'), newf.get('href'))
+            print("달라요~")
         
 
 NewPost_file()
